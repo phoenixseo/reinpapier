@@ -1,6 +1,6 @@
 # About this Project
 
-This project is the website for domain [klt-vda.com](https://klt-vda.com) by DE-PACK GmbH & Co. KG.
+This project is the website for domain [reinpapier.de](https://reinpapier.de) by DE-PACK GmbH & Co. KG.
 
 ## Tech base
 
