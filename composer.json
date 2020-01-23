@@ -23,7 +23,7 @@
         "cweagans/composer-patches": "^1.6.5",
         "drupal-composer/drupal-scaffold": "^2.5",
         "drupal/console": "^1.0.2",
-        "drupal/core": "^8.7.0",
+        "drupal/core": "^8",
         "drush/drush": "^9.0.0",
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",
@@ -31,8 +31,6 @@
         "zaporylie/composer-drupal-optimizations": "^1.0",
         "drupal/address": "^1.4",
         "drupal/admin_toolbar": "^2",
-        "drupal/amp": "^3",
-        "drupal/amptheme": "^3",
         "drupal/better_exposed_filters": "^3",
         "drupal/contribute": "^1",
         "drupal/dropzonejs": "^2",
@@ -52,7 +50,8 @@
         "drupal/superfish": "^1",
         "drupal/token": "^1",
         "drupal/video_embed_field": "^2",
-        "drupal/yoast_seo": "^1"
+        "drupal/yoast_seo": "^1",
+        "drupal/ctools": "^3"
     },
     "require-dev": {
         "webflo/drupal-core-require-dev": "^8.7.0"
@@ -69,7 +68,9 @@
         "classmap": [
             "scripts/composer/ScriptHandler.php"
         ],
-        "files": ["load.environment.php"]
+        "files": [
+            "load.environment.php"
+        ]
     },
     "scripts": {
         "pre-install-cmd": [
@@ -91,12 +92,24 @@
             "drupal/core": "-p2"
         },
         "installer-paths": {
-            "web/core": ["type:drupal-core"],
-            "web/libraries/{$name}": ["type:drupal-library"],
-            "web/modules/contrib/{$name}": ["type:drupal-module"],
-            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
-            "web/themes/contrib/{$name}": ["type:drupal-theme"],
-            "drush/Commands/{$name}": ["type:drupal-drush"]
+            "web/core": [
+                "type:drupal-core"
+            ],
+            "web/libraries/{$name}": [
+                "type:drupal-library"
+            ],
+            "web/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "web/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "web/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "drush/Commands/{$name}": [
+                "type:drupal-drush"
+            ]
         },
         "drupal-scaffold": {
             "initial": {
@@ -104,5 +117,6 @@
                 ".gitattributes": "../.gitattributes"
             }
         }
-    }
+    },
+    "homepage": "https://reinpapier.de"
 }
